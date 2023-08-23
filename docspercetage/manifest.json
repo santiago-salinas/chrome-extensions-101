@@ -1,10 +1,18 @@
 {
   "manifest_version": 3,
-  "name": "Hello Extensions of the world!",
-  "description": "Base Level Extension",
+  "name": "Doc Percentage",
+  "description": "Get percentage of docs",
   "version": "1.0",
   "action": {
     "default_popup": "hello.html",
     "default_icon": "hello_extensions.png"
-  }
+  },
+  "content_scripts": [
+    {
+      "js": ["scripts/content.js"],
+      "matches": [
+        "https://docs.google.com/document/d/*"
+      ]
+    }
+  ]
 }
